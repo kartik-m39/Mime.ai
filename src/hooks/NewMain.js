@@ -46,7 +46,12 @@ export function NewThree(labelId, containerId) {
   //     console.log(wordList);
   // });
 
-  fetch("/reference1_normalized.json")
+  // Modify your fetch logic
+const word = wordList[wordidx];
+const firstChar = word.charAt(0).toLowerCase();
+const jsonUrl = `/reference_chunks/${firstChar}.json`;
+
+  fetch(jsonUrl)
     .then((response) => {
     console.log("JSON fetch response status:", response.status);
     return response.json();
