@@ -47,8 +47,11 @@ export function NewThree(labelId, containerId) {
 
   if (wordList.length > 0 && wordList[wordidx]) {
     const word = wordList[wordidx];
-    const firstChar = word.charAt(0).toLowerCase();
-    const jsonUrl = `/reference_chunks/${firstChar}.json`;
+
+    console.log("Looking for work in reference:", word);
+
+    // const firstChar = word.charAt(0).toLowerCase();
+    const jsonUrl = "/reference1_normalized.json";
 
     fetch(jsonUrl)
       .then((response) => {
