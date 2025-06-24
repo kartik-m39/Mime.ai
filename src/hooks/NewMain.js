@@ -47,7 +47,10 @@ export function NewThree(labelId, containerId) {
   // });
 
   fetch("/reference1_normalized.json")
-    .then((response) => response.json())
+    .then((response) => {
+    console.log("JSON fetch response status:", response.status);
+    return response.json();
+  })
     .then((data) => {
       function drawPoint(x, y, z) {
         const pointRadius = 0.25;
@@ -196,7 +199,8 @@ export function NewThree(labelId, containerId) {
       }
 
       render();
-    });
-
+    }).catch(err => {
+    console.error("Failed to load reference data:", err);
+  });
   camera.position.set(27.5, -30, 25);
 }
