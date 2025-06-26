@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { Hand, Mail, Twitter, Github, Linkedin } from 'lucide-react';
+import { Mail, Twitter, Github, Linkedin } from 'lucide-react';
 
 const Footer = () => {
   return (
