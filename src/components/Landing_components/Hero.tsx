@@ -35,22 +35,23 @@ const Hero = () => {
 
         {/* Main Content */}
         <div className="flex justify-center items-center flex-col px-8">
-          <h1 className="text-white text-4xl md:text-6xl font-bold text-center font-['bebas_neue'] z-10 mb-6 animate-fadeInUp">
+          <h1 className="text-white text-5xl md:text-6xl font-bold text-center z-10 mb-6 animate-fadeInUp drop-shadow-lg leading-tight">
             Communicate with deaf and <br /> hard of hearing People
           </h1>
 
-          <h2 className="text-white text-lg md:text-xl font-medium text-center z-10 max-w-4xl animate-fadeInUp" style={{ animationDelay: '0.3s' }}>
+          <h2 className="text-white text-lg md:text-xl font-medium text-center z-10 max-w-4xl animate-fadeInUp drop-shadow-lg" style={{ animationDelay: '0.3s' }}>
             Studying ASL fosters awareness and sensitivity toward the Deaf and
             hard of hearing community. 
-            <span className="text-blue-200 font-bold"> MIME.ai</span> is all you need to
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-pink-400 font-semibold"> MIME.ai</span> is all you need to
             communicate effectively and inclusively with them.
           </h2>
 
-          <button className="mt-8 bg-white text-blue-900 px-8 py-4 rounded-2xl font-bold text-lg hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-2xl animate-fadeInUp z-10" style={{ animationDelay: '0.6s' }} onClick={() => router.push("/speech-to-text")}>
+          <button className="mt-8 bg-white text-blue-900 px-8 py-4 rounded-2xl font-bold text-lg hover:bg-blue-50 duration-300 transform hover:scale-105 animate-fadeInUp z-10 bg-gradient-radial from-white/5 via-white/0 to-transparent shadow-md hover:shadow-lg transition-all" style={{ animationDelay: '0.6s' }} onClick={() => router.push("/speech-to-text")}>
             Start Communicating →
           </button>
         </div>
       </div>
+
     </section>
   );
 };

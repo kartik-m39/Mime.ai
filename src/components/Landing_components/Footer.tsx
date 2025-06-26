@@ -11,7 +11,6 @@ const Footer = () => {
           {/* Logo and Description */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <Hand className="w-8 h-8 text-blue-400" />
               <span className="text-2xl font-bold">MIME.ai</span>
             </div>
             <p className="text-gray-400 text-lg mb-6 max-w-md">

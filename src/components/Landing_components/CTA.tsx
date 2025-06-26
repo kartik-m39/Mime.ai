@@ -2,8 +2,11 @@
 
 import React from 'react';
 import { Upload, ArrowRight, Hand } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 
 const CTA = () => {
+  const router = useRouter();
+
   return (
     <section className="py-20 px-8 bg-gradient-to-b from-indigo-950 via-blue-900 to-slate-800 relative overflow-hidden">
       {/* Background Elements */}
@@ -27,13 +30,13 @@ const CTA = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fadeInUp" style={{ animationDelay: '0.6s' }}>
-          <button className="bg-white text-blue-900 px-8 py-4 rounded-2xl font-bold text-lg hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-2xl flex items-center space-x-3">
+          <button className="bg-white text-blue-900 px-8 py-4 rounded-2xl font-bold text-lg hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-2xl flex items-center space-x-3" onClick={() => router.push("/upload")}>
             <Upload className="w-6 h-6" />
             <span>Upload Now</span>
             <ArrowRight className="w-6 h-6" />
           </button>
           
-          <button className="border-2 border-white text-white px-8 py-4 rounded-2xl font-bold text-lg hover:bg-white hover:text-blue-900 transition-all duration-300 transform hover:scale-105">
+          <button className="border-2 border-white text-white px-8 py-4 rounded-2xl font-bold text-lg hover:bg-white hover:text-blue-900 transition-all duration-300 transform hover:scale-105" onClick={() => router.push("/speech-to-text")}>
             Experience Visual Signing
           </button>
         </div>

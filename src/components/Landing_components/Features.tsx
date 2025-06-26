@@ -25,8 +25,8 @@ const Features = () => {
     },
     {
       icon: FileImage,
-      title: "Scripted Slide Generator",
-      description: "For long content, we auto-generate slides with gestures overlaid for better understanding.",
+      title: "Scripted Slide Generator (Coming soon!)",
+      description: "For long content, we auto-generate slides with gestures overlaid for better understanding. ",
       gradient: "from-orange-500 to-red-500"
     }
   ];

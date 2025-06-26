@@ -2,8 +2,11 @@
 
 import React from 'react';
 import { Upload, Cpu, Play } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 
 const HowItWorks = () => {
+  const router  = useRouter();
+
   const steps = [
     {
       icon: Upload,
@@ -62,9 +65,13 @@ const HowItWorks = () => {
           </div>
         </div>
 
-        <div className="mt-16 text-center">
-          <button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl animate-fadeInUp" style={{ animationDelay: '0.9s' }}>
-            Try It Now →
+        <div className="mt-16 text-center flex gap-4 items-center justify-center">
+          <button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl animate-fadeInUp" style={{ animationDelay: '0.9s' }} onClick={() => router.push("/speech-to-text")}>
+            Real time speech-to-sign →
+          </button>
+
+          <button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl animate-fadeInUp" style={{ animationDelay: '0.9s' }} onClick={() => router.push("/upload")}>
+            Upload your files →
           </button>
         </div>
       </div>
