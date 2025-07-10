@@ -52,7 +52,7 @@ export default function NewUploadInterface() {
           <div className="flex items-center justify-center gap-3 mb-1">
             
             <h2 className="text-xl md:text-xl lg:text-xl font-semibold bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent">
-              Studying ASL fosters awareness and sensitivity toward the Deaf and hard of hearing community.
+              Studying ISL fosters awareness and sensitivity toward the Deaf and hard of hearing community.
             </h2>
           </div>
           

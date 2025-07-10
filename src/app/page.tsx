@@ -30,7 +30,7 @@ export default function Home() {
 
   return (
    
-    <div className={`scroll-container min-h-screen bg-gradient-to-b from-gray-900 to-black pt-2 overflow-y-scroll h-[500px] `}> 
+    <div className={`scroll-container min-h-screen bg-gradient-to-b from-gray-900 to-[#04131a] pt-2 overflow-y-scroll h-[500px] `}> 
       <Header />
       <Hero />
       <ProblemStatement />
