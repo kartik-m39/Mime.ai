@@ -12,7 +12,7 @@ export function updateWordList(words) {
 }
 
 export function NewThree(labelId, containerId) {
-    console.log("Here from 3 function");
+    // console.log("Here from 3 function");
 
   var label = document.getElementById(labelId);
   var container = document.getElementById(containerId);

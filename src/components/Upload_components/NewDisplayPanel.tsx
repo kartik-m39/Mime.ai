@@ -19,15 +19,15 @@ export function NewDisplayPanel({ data }: ChildProps) {
   const [currentWord, setCurrentWord] = useState<string>("READY");
   const [isPlaying, setIsPlaying] = useState(false);
 
-  console.log("Data reached in DisplayPanel: " + data);
+  // console.log("Data reached in DisplayPanel: " + data);
 
   useEffect(() => {
     const initializeThreeJS = () => {
       try {
-        console.log("Initializing Three.js...");
+        // console.log("Initializing Three.js...");
         NewThree("label", "container");
         setIsThreeJSInitialized(true);
-        console.log("Three.js initialized successfully");
+        // console.log("Three.js initialized successfully");
       } catch (error) {
         console.error("Failed to initialize Three.js:", error);
       }

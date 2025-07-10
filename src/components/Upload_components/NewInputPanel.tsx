@@ -42,7 +42,7 @@ export default function NewInputPanel({setData}: ChildProps) {
       const updatedData = { ...inputData, text: text };
 
       setInputData(updatedData)
-      console.log(updatedData)
+      // console.log(updatedData)
 
 
       // send it to backend and roll it up to parent
@@ -53,14 +53,14 @@ export default function NewInputPanel({setData}: ChildProps) {
   const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
       const files = e.target.files;
       if (files && files.length > 0) {
-        console.log(files);
+        // console.log(files);
 
         
         const updatedData = { ...inputData, file: files[0] };
 
         setInputData(updatedData)
 
-        console.log(updatedData);
+        // console.log(updatedData);
 
         sendToBackend(updatedData);                     // need to send data to backend
       }
@@ -74,7 +74,7 @@ export default function NewInputPanel({setData}: ChildProps) {
 
   const sendToBackend = async (data: InputData) => {
     try {
-      console.log(data);
+      // console.log(data);
       setIsLoading(true);
 
       const formData = inputDataToFormData(data)
@@ -88,19 +88,19 @@ export default function NewInputPanel({setData}: ChildProps) {
       //   }
       // });
 
-      console.log("Form Data: "+ formData)
+      // console.log("Form Data: "+ formData)
 
-      for (const [key, value] of formData.entries()) {
-        console.log(`${key}:`, value);
-      }
+      // for (const [key, value] of formData.entries()) {
+      //   console.log(`${key}:`, value);
+      // }
 
       const response = await axios.post(
         "https://mime-ai.onrender.com/api/process/",
         formData
       );
 
-      console.log(response)
-      console.log("Backend response:", response.data);
+      // console.log(response)
+      // console.log("Backend response:", response.data);
       setData(response.data.gloss);
     } catch (error) {
       console.error("Error sending word to backend:", error);

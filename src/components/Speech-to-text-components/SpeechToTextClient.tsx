@@ -50,7 +50,7 @@ export default function SpeechToTextClient() {
   const [isThreeJSInitialized, setIsThreeJSInitialized] = useState(false);
   // tracking words sent to backend
   const sentWordsRef = useRef<Set<string>>(new Set());
-  console.log(DjangoData);
+  // console.log(DjangoData);
 
   //   // Initialize Three.js after component mounts
   //   useEffect(() => {
@@ -92,10 +92,10 @@ export default function SpeechToTextClient() {
   useEffect(() => {
     const initializeThreeJS = () => {
       try {
-        console.log("Initializing Three.js...");
+        // console.log("Initializing Three.js...");
         NewThree("label", "container");
         setIsThreeJSInitialized(true);
-        console.log("Three.js initialized successfully");
+        // console.log("Three.js initialized successfully");
       } catch (error) {
         console.error("Failed to initialize Three.js:", error);
       }
@@ -143,7 +143,7 @@ export default function SpeechToTextClient() {
 
       // Send each new word to the backend
       newWords.forEach((word) => {
-        console.log("sending to backend:   " + word);
+        // console.log("sending to backend:   " + word);
         sendToBackend(word);
         setIsProcessing(true);
       });
@@ -152,7 +152,7 @@ export default function SpeechToTextClient() {
 
   const sendToBackend = async (word: string) => {
     try {
-      console.log(word);
+      // console.log(word);
 
       const formData = new FormData(); // As Django backend accepts from-data instead of json
       formData.append("category", "text");
@@ -163,9 +163,9 @@ export default function SpeechToTextClient() {
         formData
       );
 
-      console.log(response);
+      // console.log(response);
       setDjangodata(response.data.gloss);
-      console.log("Backend response:", response.data);
+      // console.log("Backend response:", response.data);
     } catch (error) {
       console.error("Error sending word to backend:", error);
     } finally {
