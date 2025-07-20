@@ -2,7 +2,7 @@
 
 import { inputDataToFormData } from "@/utilities/Functions";
 import axios from "axios";
-import { FileText, Loader2, Mic, Send, Sparkles, Upload, UploadCloud, Video } from "lucide-react";
+import { FileText, Loader2, Mic, Send, Sparkles, UploadCloud, Video } from "lucide-react";
 import { useRef, useState } from "react";
 
 interface InputData {
