@@ -69,10 +69,6 @@ const HowItWorks = () => {
           <button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl animate-fadeInUp" style={{ animationDelay: '0.9s' }} onClick={() => router.push("/speech-to-text")}>
             Real time speech-to-sign →
           </button>
-
-          <button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl animate-fadeInUp" style={{ animationDelay: '0.9s' }} onClick={() => router.push("/upload")}>
-            Upload your files →
-          </button>
         </div>
       </div>
     </section>

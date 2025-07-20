@@ -22,6 +22,7 @@ import {
   Volume2,
   Zap,
 } from "lucide-react";
+import { useRouter } from "next/navigation";
 import React, { useEffect, useRef, useState } from "react";
 import useSpeechToText from "react-hook-speech-to-text";
 
@@ -50,6 +51,7 @@ export default function SpeechToTextClient() {
   const [isThreeJSInitialized, setIsThreeJSInitialized] = useState(false);
   // tracking words sent to backend
   const sentWordsRef = useRef<Set<string>>(new Set());
+  const router = useRouter();
   // console.log(DjangoData);
 
   //   // Initialize Three.js after component mounts
@@ -224,10 +226,19 @@ export default function SpeechToTextClient() {
 
       <div className="relative z-10 container mx-auto px-4 py-4 h-screen flex flex-col">
         {/* Header */}
-        <div className="text-center mb-8 animate-fadeInUp">
-          <p className="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed animate-fadeInUp delay-300">
-            Speak naturally and watch your words transform into beautiful 3D
-            sign language animations in real-time.
+        <div className="relative text-center mb-4 animate-fadeInUp">
+          <button
+            className="absolute top-0 right-0 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-medium px-4 py-2 rounded-lg hover:bg-white/20 hover:border-white/30 transition-all duration-300 ease-out hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-white/50 shadow-lg hover:shadow-xl"
+            onClick={() => router.push("/upload")}
+          >
+            Upload files
+          </button>
+
+          <p className="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed tracking-tighter animate-fadeInUp delay-300">
+            Speak naturally and watch your words transform into beautiful
+          </p>
+          <p className="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed tracking-tighter animate-fadeInUp delay-300">
+            3D sign language animations in real-time.
           </p>
         </div>
 

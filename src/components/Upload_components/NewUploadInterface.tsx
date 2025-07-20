@@ -48,7 +48,7 @@ export default function NewUploadInterface() {
 
       <div className="relative z-10 container mx-auto px-4 py-8 h-screen flex flex-col">
         {/* Header */}
-        <div className="text-center mb-8 animate-fadeInUp">
+        <div className="text-center mb-6 animate-fadeInUp">
           <div className="flex items-center justify-center gap-3 mb-1">
             
             <h2 className="text-xl md:text-xl lg:text-xl font-semibold bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent">

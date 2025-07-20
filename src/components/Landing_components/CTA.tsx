@@ -41,7 +41,7 @@ const CTA = () => {
           </button>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 animate-fadeInUp" style={{ animationDelay: '0.9s' }}>
+        {/* <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 animate-fadeInUp" style={{ animationDelay: '0.9s' }}>
           <div className="text-center">
             <div className="text-3xl font-bold text-white mb-2">10K+</div>
             <div className="text-blue-200">Files Processed</div>
@@ -54,7 +54,7 @@ const CTA = () => {
             <div className="text-3xl font-bold text-white mb-2">24/7</div>
             <div className="text-blue-200">Available</div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

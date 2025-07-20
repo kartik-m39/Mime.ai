@@ -28,7 +28,7 @@ export default function NewInputPanel({setData}: ChildProps) {
     { value: "text", label: "Text", icon: FileText, color: "from-blue-500 to-cyan-500" },
     { value: "audio", label: "Audio", icon: Mic, color: "from-purple-500 to-pink-500" },
     { value: "video", label: "Video", icon: Video, color: "from-green-500 to-emerald-500" },
-    { value: "file", label: "File", icon: Upload, color: "from-orange-500 to-red-500" },
+    // { value: "file", label: "File", icon: Upload, color: "from-orange-500 to-red-500" },
   ];
 
   function handleCategorySelect(category: string) {
@@ -135,19 +135,19 @@ return (
           <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full" />
           Select Input Type
         </h3>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-3 gap-4">
           {categories.map((item, index) => (
             <button
               key={item.value}
               onClick={() => handleCategorySelect(item.value)}
-              className={`group relative p-1 rounded-2xl border transition-all duration-500 hover:scale-105 hover:shadow-2xl transform-gpu ${
+              className={`group relative p-1 rounded-2xl border mb-4 transition-all duration-500 hover:scale-105 hover:shadow-2xl transform-gpu ${
                 inputData?.category === item.value
                   ? 'bg-gradient-to-br from-white/20 to-white/5 border-white/30 shadow-2xl scale-105'
                   : 'bg-white/5 border-white/10 hover:bg-white/10 hover:border-white/20'
               }`}
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="flex flex-col items-center gap-1 p-1 ">
+              <div className="flex flex-col items-center gap-1 p-5 ">
                 <div className={`relative p-4 rounded-xl transition-all duration-500 ${
                   inputData?.category === item.value
                     ? `bg-gradient-to-r ${item.color} text-white shadow-lg scale-90`
